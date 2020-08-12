@@ -1,0 +1,13 @@
+universe = vanilla
+Executable = RunCondor.sh
+request_memory = 20000
+Output = good2.out
+Error = good2.err
+Log = good2.log
+should_transfer_files = YES
+transfer_input_files = RunCondor.sh,tchannelCom.tgz
+when_to_transfer_output = ON_EXIT
+x509userproxy = $ENV(X509_USER_PROXY)
+Arguments = 18POST ZJets
+notification = Never
+Queue 1
